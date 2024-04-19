@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="index">
+        <a href="#!/pagina_1">pagina 1</a>
+        <a href="#!/pagina_2">pagina 2</a>
+        <a href="#!/pagina_3">pagina 3</a>
+    </div>
+        
+    <div ng-view></div>
+
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+
+        app.service('sharedService', function () {
+            var sharedText = "";
+
+            return {
+                getSharedText: function () {
+                    return sharedText;
+                },
+                setSharedText: function (text) {
+                    sharedText = text;
+                }
+            };
+        });
+
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/pagina_1", {
+                templateUrl: "pagina_1.html",
+                controller: "1Ctrl"
+                })
+                .when("/pagina_2", {
+                templateUrl: "pagina_2.html",
+                controller: "2Ctrl"
+                })
+                .when("/pagina_3", {
+                templateUrl : "pagina_3.html",
+                    controller : "3Ctrl"
+                });
+        });
+        app.controller('1Ctrl', function ($scope, sharedService) {
+            $scope.inputText = "";
+            $scope.savedText = "";
+            $scope.saveText = function () {
+                $scope.savedText = $scope.inputText;
+                sharedService.setSharedText($scope.inputText);
+                $scope.inputText = "";
+            }
+        });
+        app.controller("2Ctrl", function ($scope, sharedService) {
+            $scope.sharedService = sharedService;
+        });
+        app.controller("3Ctrl", function($scope, $http) {
+        $http.get("file.json")
+        .then(function (response) {$scope.names = response.data.file;});
+        });
+    </script>
+
+</body>
+
+</html>

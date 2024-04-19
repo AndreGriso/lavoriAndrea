@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type=" image/x-icon" href="docs/images/favicon.ico"/> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg-com/leaflet@1.9.4/dist/leaflet.is" integrity="sha256-20nQCchB9co0q[jJZRGuk2/Z9VM+kNiyxNV1vT1ZB0=" crossorigin="">
+
+    </script>
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+    <title>Leaflet Map with Marker</title>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+    var map = L.map('map').setView([0, 0], 10);
+    var posizione= L.marker([0,0]).addTo(map);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    navigator.geolocation.getCurrentPosition(
+        function(position){
+            map.setView([position.coords.latitude,position.coords.longitude],15);
+            posizione.setLatLng([position.coords.latitude, position.coords.longitude]).bindPopup("sei posizionato qui,<br> più o meno!!!").openPopup();
+        },
+function (error){
+    console.error("errore", error);
+}
+);
+        
+</script>
+</body>
+</html>

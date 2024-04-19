@@ -1,0 +1,36 @@
+body{
+    font-family: cursive;
+    background-color: rgb(113, 245, 101);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: Monospace ;
+}
+
+button{
+    border: none;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div{
+    background: white;
+    color: rgb(31, 159, 59);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+div table{
+    border: 2px solid rgb(27, 219, 27);
+}
+
+div table tr{
+    border: none;
+}

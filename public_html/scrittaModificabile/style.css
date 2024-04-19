@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #09ffff83;
+    margin:100 vh;
+    align-items: center;
+}
+.principale{
+    display: flex;
+    padding:2%;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    margin: 2%;
+    text-align: center;
+}

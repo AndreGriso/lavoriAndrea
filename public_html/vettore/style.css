@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: #ffab4a;
+}
+
+.divPrinciplale{
+    display: block;
+    background-color: white;
+    width: 85vw;
+    padding: 35px;
+    border-radius: 20px;
+    margin: 0 20px;
+}
+
+.arrayContenitore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#ffab4a;
+    width: 100%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    margin: 10px -10px;
+}
+
+input::-webkit-inner-spin-button { 
+    -webkit-appearance:none;
+}
+/* serve per poter inserire soltanto numeri con il */
+.arrayCaselle{
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border: solid 2px #ffab4a;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 18px;
+    color: #e71920;
+}
+
+.arrayFunzioni{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px #e71920;
+    width: 100%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    margin: 10px -10px;
+}
+
+.arrayFunzioni button{
+    text-align: center;
+    width: 100%;
+    height: 24px;
+    margin: 10px;
+    border: solid 2px #e71920;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.arrayFunzioni button:hover{
+    background-color: #f15b1a;
+}
+
+.arrayRisultato{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px #ffab4a;
+    background-color: rgba(221, 15, 15, 0.2);
+}

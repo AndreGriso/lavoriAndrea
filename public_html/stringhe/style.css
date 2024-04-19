@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: #ffab4a;
+}
+
+.div1{
+    display: block;
+    background-color: rgb(255, 0, 0);
+    width: 90vw;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    margin: 0 10px;
+}
+.divPrincipale{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 80vw;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.divStringa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    margin: 10px -10px;
+}
+
+.divInput{
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border: solid 2px #ffab4a;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 25px;
+}
+
+.divFunzioni{
+    display: flex;
+    align-items: center;
+    border: solid 2px #ffab4a;
+    width: 100%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    margin: 10px -10px;
+}
+
+
+.divFunzioni input{
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    border: solid 2px #ffab4a;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.divFunzioni button{
+    text-align: center;
+    width: 100%;
+    height: 24px;
+    margin: 5px;
+    border: solid 2px #e71920;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.divFunzioni button:hover{
+    background-color: #e71920;
+}

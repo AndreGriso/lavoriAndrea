@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: rgba(147, 219, 254, 0.962);;
+}
+.div1 {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    width: 75vh;
+    height: 40vh;
+    border-radius: 10px;
+}   
+.bottone{
+    margin: 10px 0;
+    border-radius: 7px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: white;
+}
+.cliccami{
+    margin: 10px 0;
+    padding: 0 20px;
+    border-radius: 7px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.cliccami:hover{
+    filter: brightness(.8);
+}
+
+.divb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+.divScritte{
+    height: 25%;
+    width: 90%;
+    margin: 5% 5%;
+    padding: 10px 0;
+    display:block;
+    text-align: center;
+    border:  solid red;
+}
