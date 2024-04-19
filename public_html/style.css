@@ -3,22 +3,25 @@ body{
     display: flex;
     flex-direction:column;
     height: 100vh;
-    justify-content: center;
     align-items: center;
     font-family:Verdana;
-    background:url("sfondo.jpg");
+    background:url("sfondo.jpg") no-repeat center;
     background-size: cover;
 }
+
 .divTitolo{
-    display:flex;
-    border: 2px solid black;
-    background-color: rgb(255, 255, 255);
+    background: none;
     border-radius:10px;
-    width:35vh;
-    height:5vh;
-    margin:100px;
-    justify-content: center;
-    align-items: center;
+    width:350px;
+    margin:100px auto 10px auto;
+}
+
+.scritta{
+    text-align: center;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(red, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .div{
     display:flex;
@@ -41,6 +44,11 @@ body{
     background-color: #05BFDB;
     border-radius:5px;
     width:80%;
+    text-decoration: none;
     
-    
+}
+
+.div a:hover,
+.div a:active{
+    background-color: #049bb3;
 }
